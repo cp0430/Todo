@@ -77,6 +77,7 @@ A full-stack Todo application built with **React** and **Vite** for the frontend
       npm install
       ```
     - Create a `.env` file inside the `Frontend` folder and specify the backend API's public IP address:
+      eg.VITE_URL=http://localhost:3000
       ```
       VITE_URL=http://your-backend-ip:port
       ```
