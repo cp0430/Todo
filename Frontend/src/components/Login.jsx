@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
 function Login({ setToken }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -8,7 +7,7 @@ function Login({ setToken }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/login', {
+            const response = await axios.post(`${import.meta.env.VITE_URL}/login`, {
                 username,
                 password
             });

@@ -9,7 +9,7 @@ function TodoList() {
             try {
                 const token = sessionStorage.getItem('authorization'); // Retrieve the token
 
-                const response = await axios.get('http://localhost:3000/', {
+                const response = await axios.get(`${import.meta.env.VITE_URL}/`, {
                     headers: { "authorization": `${token}` } // Include Bearer prefix
                 });
                 setTodos(response.data.todos);
@@ -28,7 +28,7 @@ function TodoList() {
             });
             setTodos(todos.map(todo => todo.id === id ? { ...todo, completed: true } : todo));
         } catch (error) {
-            alert(error.response?.data?.msg || "Error marking todo as completed");
+            alert(error.response?.data?.msexg || "Error marking todo as completed");
         }
     };
 

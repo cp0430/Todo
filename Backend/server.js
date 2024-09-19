@@ -3,9 +3,9 @@ const { createTodo, updateTodo, createAccount, loginAccount } = require('./types
 const { getTodoModel, users } = require('./database');
 const {generateToken , verifyToken} = require('./auth');
 const app = express();
+
 const cors = require('cors');
 app.use(cors());
-
 app.use(express.json());
 
 

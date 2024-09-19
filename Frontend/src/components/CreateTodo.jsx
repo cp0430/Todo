@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
 import axios from 'axios';
-
-
 function CreateTodo() {
     
     
@@ -13,7 +11,7 @@ function CreateTodo() {
         e.preventDefault();
         try {
             const token = sessionStorage.getItem('authorization'); // Retrieve the token
-            const response = await axios.post('http://localhost:3000/todo', {
+            const response = await axios.post( `${import.meta.env.VITE_URL}/todo`, {
                 id: Date.now().toString(),
                 title,
                 description
